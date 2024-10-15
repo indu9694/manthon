@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Receiver Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PRODUCT RECEIVER COUNTER</h1>
+
+        <form id="product-form">
+            <label for="retailer-name">Retailer Name:</label>
+            <input type="text" id="retailer-name" required>
+
+            <label for="billing-date">Billing Date:</label>
+            <input type="date" id="billing-date" required>
+
+            <label for="retailer-address">Retailer Address:</label>
+            <input type="text" id="retailer-address" required>
+
+            <button type="button" id="add-row">Add Item</button>
+        </form>
+
+        <table id="product-table">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Product Description</th>
+                    <th>Quantity</th>
+                    <th>Unit Price</th>
+                    <th>Total Amount</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rows will be added here -->
+            </tbody>
+        </table>
+
+        <div id="grand-total">Grand Total: 0.00</div>
+        <button id="download-pdf">Download PDF</button>
+    </div>
+
+    <div id="pdf-modal" style="display:none;">
+        <iframe id="pdf-iframe"></iframe>
+        <button id="confirm-download">Download PDF</button>
+        <button id="close-modal">Close</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.22/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
