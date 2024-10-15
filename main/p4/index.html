@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <title>Techavi Payment Gateway Service</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TECHAVI PAYMENT GATEWAY SERVICE</h1>
+        <div id="qr-code" class="qr-code"></div>
+        <button id="download-qr" class="download-button">Download QR Code</button>
+        <div id="timer" class="timer">Time left: 08:00</div>
+        <div class="instructions">SCAN AND PAY NOW, FILL THE FORM PROPERLY, SEND INSHOT ON WHATSAPP</div>
+        <form id="data-form">
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile-number">Mobile Number</label>
+                <input type="tel" id="mobile-number" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email ID</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Address</label>
+                <textarea id="address" rows="4" required></textarea>
+            </div>
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

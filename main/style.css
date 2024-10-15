@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(211, 235, 227);
+}
+#logo-img{
+    width: 30px;
+    height: 30px;
+    margin: 3px;
+    justify-self: center;
+}
+.headline{
+    background-color: #065f6b;
+    font-size: 50px;
+    text-align: center;
+    text-align: center;
+}
+.nav-list{
+    display:flex;
+    list-style-type:none;
+    justify-content: space-between;
+}
+.links{
+    display:flex;
+    justify-content: space-between;
+}
+.navbar{
+    background-color: orange;
+    color: rgb(20, 20, 20);
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    font-size: 30px;
+    margin-top: 10px;
+    margin-right: 100px;
+    padding: 5px;
+}
+.nav-list>li{
+    font-size: 30px;
+    margin-right: 100px;
+    padding: 5px;
+}
+.down{
+    display: flex;
+
+}
+.up{
+    display: flex;
+
+}
+.main{
+    padding-left: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.Card{
+    font-size: 30px;
+    background-color: rgb(188, 255, 80);
+    height: 140px;
+    width: 40%;
+    text-align: center;
+    margin: 10px;
+    padding-top: 90px;
+    justify-content: center;
+    border: 5px solid orange;
+
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+}
+.footer{
+    background-color: rgb(31, 27, 27);
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+#about1 {
+    display:flex;
+    margin: 10;
+    justify-content: space-between;
+}
+.content{
+    width: 300px;
+}
+.about-img{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

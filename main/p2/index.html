@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Receiver Counter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="title">TECHAVI DIGITAL AUTOMATION AGENCY</div>
+
+    <div class="customer-info">
+        <label for="customerName">Customer Name:</label>
+        <input type="text" id="customerName">
+
+        <label for="customerDate">Billing Date:</label>
+        <input type="text" id="customerDate" placeholder="YYYY-MM-DD">
+
+        <label for="customerAddress">Customer Address:</label>
+        <input type="text" id="customerAddress">
+    </div>
+
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>S.No.</th>
+                <th>Goods Description</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Total Amount</th>
+
+                <th class="hidden">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>
+                    <select class="goods-description">
+                        <option value="">Select Item</option>
+                    </select>
+                </td>
+                <td><input type="number" class="quantity" oninput="updateTotalAmount(this)"></td>
+                <td><input type="number" class="amount" oninput="updateTotalAmount(this)"></td>
+                <td class="total-amount">0.00</td>
+                <td class="hidden"><button class="delete-button" onclick="deleteItem(this)">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="add-button" onclick="addItem()">Add Item</button>
+
+    <div>
+        <label for="cgst">CGST (%):</label>
+        <input type="number" id="cgst" oninput="calculateFinalTotal()">
+
+        <label for="sgst">SGST (%):</label>
+        <input type="number" id="sgst" oninput="calculateFinalTotal()">
+
+        <label for="gst">GST (%):</label>
+        <input type="number" id="gst" oninput="calculateFinalTotal()">
+
+        <label for="discount">Discount (%):</label>
+        <input type="number" id="discount" value="0" oninput="calculateFinalTotal()">
+    </div>
+
+    <div id="finalTotalContainer">
+        <p><strong>Total Amount Before GST and Discount: </strong><span id="totalBeforeDiscount">0.00</span></p>
+        <p><strong>CGST (0%): </strong><span id="cgstAmount">0.00</span></p>
+        <p><strong>SGST (0%): </strong><span id="sgstAmount">0.00</span></p>
+        <p><strong>GST (18%): </strong><span id="totalGST">0.00</span></p>
+        <p><strong>Discount Amount: </strong><span id="discountAmount">0.00</span></p>
+        <p><strong>Final Total Amount: </strong><span id="finalTotalAmount">0.00</span></p>
+    </div>
+
+    <button class="calculate-button" onclick="previewPDF()">Preview PDF</button>
+    <button class="calculate-button" onclick="savePDF()">Download PDF</button>
+
+    <div class="pdf-preview" id="pdfPreview"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.14/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
